@@ -1,0 +1,21 @@
+.nominations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.nominate_warning {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.alert {
+  width: 80%;
+  padding: 20px;
+  background: indianred;
+  color: #100e0e;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+}

@@ -1,0 +1,54 @@
+p {
+  margin: 0;
+}
+
+.detail-container {
+  margin-top: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  /* color:rgba(255, 255, 255, 0.6); */
+}
+
+.poster {
+  box-shadow: 4px 1px 4px 4px rgb(0 0 0 / 18%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.poster img {
+  border-radius: 10px;
+}
+
+.info {
+  margin-left: 40px;
+  text-align: left;
+  box-shadow: 1px 6px 18px rgb(0 0 0 / 25%);
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.field {
+  text-align: left;
+  font-size: 22px;
+  /* margin-bottom: 20px; */
+}
+
+.label {
+  /* color:rgba(255, 255, 255, 0.8); */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.label-p {
+  display: inline-block;
+  /* color:rgba(255, 255, 255, 0.6); */
+  font-size: 20px;
+}
+
+.title {
+  /* color:white; */
+  font-size: 28px;
+}

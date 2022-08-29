@@ -1,0 +1,36 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-warning {
+  margin-top: -12px;
+  color: #a94442;
+}
+
+.search-empty {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.alert {
+  width: 80%;
+  padding: 20px;
+  background: indianred;
+  color: #100e0e;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.text-link {
+  text-decoration: none;
+  color: inherit;
+}
