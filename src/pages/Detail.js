@@ -30,11 +30,7 @@ const Detail = () => {
   return (
     <div className={classes["detail-container"]}>
       <div className={classes["poster"]}>
-        {Poster === "N/A" ? (
-          <img src={noImage} alt={Title} />
-        ) : (
-          <img src={Poster} alt={Title} />
-        )}
+        <img src={Poster === "N/A" ? noImage : Poster} alt={Title} />
       </div>
       <div className={classes["info"]}>
         <h1> {Title} </h1>

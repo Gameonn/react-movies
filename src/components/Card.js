@@ -11,21 +11,15 @@ const Card = ({ image, title, addNomination, isNominated }) => {
   return (
     <div className={classes.card}>
       <div className={classes.icon} onClick={addNomination}>
-        {isNominated ? (
-          <i>
-            <FontAwesomeIcon icon={faStarSolid} color="##FFF700" size="2x" />
-          </i>
-        ) : (
-          <i>
-            <FontAwesomeIcon icon={faStarRegular} color="##FFF700" size="2x" />
-          </i>
-        )}
+        <i>
+          <FontAwesomeIcon
+            icon={isNominated ? faStarSolid : faStarRegular}
+            color="##FFF700"
+            size="2x"
+          />
+        </i>
       </div>
-      {image === "N/A" ? (
-        <img src={noImage} alt={title} />
-      ) : (
-        <img src={image} alt={title} />
-      )}
+      <img src={image === "N/A" ? noImage : image} alt={title} />
 
       <div className={classes.info}>
         <span className={classes.title}>{title}</span>
