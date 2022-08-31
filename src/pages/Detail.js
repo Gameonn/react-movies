@@ -2,25 +2,24 @@ import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 import { MovieContext } from "../context/MovieContext";
-
 import noImage from "../assets/no-image-available.png";
 import classes from "../styles/Detail.module.css";
 
 const Detail = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const {
     showDetail,
     selectedMovie: {
-      Title,
       Plot,
       Poster,
-      Released,
-      Genre,
-      Runtime,
-      imdbRating,
+      Title,
       Director,
-      Writer,
-      Language
+      Genre,
+      imdbRating,
+      Language,
+      Released,
+      Runtime,
+      Writer
     }
   } = useContext(MovieContext);
   useEffect(() => {
@@ -35,6 +34,7 @@ const Detail = () => {
       <div className={classes["info"]}>
         <h1> {Title} </h1>
         <p> {Plot} </p>
+
         <h4>
           Released: <i> {Released} </i>
         </h4>

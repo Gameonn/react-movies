@@ -24,7 +24,7 @@ const Home = () => {
   };
 
   return (
-    <div className={classes["home-container"]}>
+    <div className={classes["home-container"]} data-test-id="home">
       {nominationAlert && <h4 className={classes.alert}>{nominationAlert}</h4>}
 
       {!value && (

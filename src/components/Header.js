@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <>
       <header className={classes.header}>
-        <h1>React Movies</h1>
+        <h1>
+          <Link to="/"> React Movies </Link>
+        </h1>
         <nav>
           <div className={classes["nav-item"]}>
             <div className={classes["nav-links"]}>
