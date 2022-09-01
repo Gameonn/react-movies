@@ -7,7 +7,7 @@ const Input = ({ handleSearch }) => {
     <div className={classes["input-wrapper"]} aria-label="search-input">
       <input
         className="search"
-        placeholder="Search..."
+        placeholder="Search your favorite movie"
         onChange={handleSearch}
       />
     </div>

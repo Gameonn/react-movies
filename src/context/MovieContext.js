@@ -1,31 +1,22 @@
-import React, { createContext, useState, useEffect } from "react";
-import axios from "../axios";
+import React, { createContext, useState } from "react";
+// import axios from "../axios";
 export const MovieContext = createContext();
 
 const MovieApp = ({ children }) => {
   const [nominations, setNominations] = useState([]);
   const [nominationAlert, setNominationAlert] = useState("");
-  const [movies, setMovies] = useState();
-  const [search, setSearch] = useState("2022");
-  const [selectedMovie, setSelectedMovie] = useState("");
+  // const [movies, setMovies] = useState();
+  // const [search, setSearch] = useState("2022");
 
-  const fetchMovies = async searchValue => {
-    const response = await axios.get("/", {
-      params: { s: searchValue, type: "movie" }
-    });
-    const data = response.data;
-    setMovies(data.Search);
-  };
-
-  const removeNominatedMovie = movie => {
+  const removeNominatedMovie = (movie) => {
     movie.isNominated = false;
     const newNominationList = nominations.filter(
-      n => n.imdbID !== movie.imdbID
+      (n) => n.imdbID !== movie.imdbID
     );
     setNominations(newNominationList);
   };
 
-  const addNominatedMovie = movie => {
+  const addNominatedMovie = (movie) => {
     movie.isNominated = true;
     const newNominationList = [...nominations, movie];
     setNominations(newNominationList);
@@ -40,32 +31,21 @@ const MovieApp = ({ children }) => {
       if (nominations.length < 5) {
         addNominatedMovie(movie);
       } else {
-        setNominationAlert("Nomination Limit Reached");
+        setNominationAlert(
+          "You have reached the nomination limit! Please unselect and select other movies."
+        );
         window.scrollTo(0, 0);
       }
     }
   };
 
-  const showDetail = async id => {
-    const response = await axios.get("/", { params: { i: id, type: "movie" } });
-    const data = response.data;
-    setSelectedMovie(data);
-  };
-
-  useEffect(() => {
-    fetchMovies(search);
-  }, [search]);
-
   return (
     <MovieContext.Provider
       value={{
-        setSearch,
-        movies,
+        // setSearch,
         nominations,
         nominationHandler,
-        showDetail,
-        selectedMovie,
-        nominationAlert
+        nominationAlert,
       }}
     >
       {children}

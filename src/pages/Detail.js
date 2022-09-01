@@ -1,33 +1,54 @@
-import React, { useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { MovieContext } from "../context/MovieContext";
+import { showMovieDetail } from "../api";
+import Spinner from "../components/Spinner";
 import noImage from "../assets/no-image-available.png";
 import classes from "../styles/Detail.module.css";
+import Alertbox from "../components/Alertbox";
 
 const Detail = () => {
+  const [selectedMovie, setSelectedMovie] = useState("");
+  const [loadingState, setLoadingState] = useState(false);
+  const [error, setError] = useState("");
   const { id } = useParams();
   const {
-    showDetail,
-    selectedMovie: {
-      Plot,
-      Poster,
-      Title,
-      Director,
-      Genre,
-      imdbRating,
-      Language,
-      Released,
-      Runtime,
-      Writer
-    }
-  } = useContext(MovieContext);
+    Plot,
+    Poster,
+    Title,
+    Director,
+    Genre,
+    imdbRating,
+    Language,
+    Released,
+    Runtime,
+    Writer,
+  } = selectedMovie;
+
+  const getMovieDetail = async (id) => {
+    const result = await showMovieDetail(id);
+    setLoadingState(false);
+    if (result.Response) setSelectedMovie(result);
+    else setError("Movie selected is not incorrect. Please try again.");
+  };
+
   useEffect(() => {
-    showDetail(id);
-  }, []);
+    setLoadingState(true);
+    setError("");
+    getMovieDetail(id);
+  }, [id]);
+
+  if (loadingState) return <Spinner />;
+
+  if (error)
+    return (
+      <div data-testid="movie-detail-error">
+        <Alertbox message={error} />
+      </div>
+    );
 
   return (
-    <div className={classes["detail-container"]}>
+    <div className={classes["detail-container"]} data-testid="movie-detail">
       <div className={classes["poster"]}>
         <img src={Poster === "N/A" ? noImage : Poster} alt={Title} />
       </div>

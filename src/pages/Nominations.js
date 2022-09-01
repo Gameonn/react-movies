@@ -2,15 +2,15 @@ import React, { useContext } from "react";
 import { MovieContext } from "../context/MovieContext";
 import Card from "../components/Card";
 import classes from "../styles/Nominations.module.css";
+import Alertbox from "../components/Alertbox";
 
 const Nominations = () => {
-  const { nominations, nominationHandler, nominationAlert } = useContext(
-    MovieContext
-  );
+  const { nominations, nominationHandler, nominationAlert } =
+    useContext(MovieContext);
 
   return (
     <>
-      {nominationAlert && <h4 className={classes.alert}>{nominationAlert}</h4>}
+      {nominationAlert && <Alertbox message={nominationAlert} />}
 
       {!nominations.length && (
         <div className={classes["nominate_warning"]}>
@@ -19,13 +19,13 @@ const Nominations = () => {
       )}
       {nominations && (
         <div className={classes["nominations"]}>
-          {nominations.map(movie => (
+          {nominations.map((movie) => (
             <Card
               key={movie.imdbID}
               image={movie.Poster}
               title={movie.Title}
               year={movie.Year}
-              addNomination={e => nominationHandler(movie, e)}
+              addNomination={(e) => nominationHandler(movie, e)}
               isNominated={movie.isNominated}
             />
           ))}

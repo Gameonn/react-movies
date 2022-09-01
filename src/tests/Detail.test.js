@@ -1,6 +1,6 @@
 import fetchMock, { enableFetchMocks } from "jest-fetch-mock";
-import { render } from "@testing-library/react";
-import { searchMovies } from "../api";
+import { render, screen } from "@testing-library/react";
+import { showMovieDetail } from "../api";
 import {
   fakeSelectedMovie,
   fakeMovieDetail,
@@ -20,7 +20,7 @@ describe("showDetail()", () => {
     // Make the mock return the custom axios response
     fetchMock.mockResponseOnce(mockedResponse);
     render(<Detail />);
-    const data = await searchMovies(fakeSelectedMovie);
+    const data = await showMovieDetail(fakeSelectedMovie);
     expect(data).toEqual(fakeMovieDetail);
   });
 
