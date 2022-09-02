@@ -20,6 +20,8 @@ const Home = () => {
   const debounceSearch = (input) => {
     if (input) fetchMovies(input);
   };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceFn = useCallback(_debounce(debounceSearch, 500), []);
 
   const searchHandler = (e) => {
