@@ -1,12 +1,9 @@
 import React, { createContext, useState } from "react";
-// import axios from "../axios";
 export const MovieContext = createContext();
 
 const MovieApp = ({ children }) => {
   const [nominations, setNominations] = useState([]);
   const [nominationAlert, setNominationAlert] = useState("");
-  // const [movies, setMovies] = useState();
-  // const [search, setSearch] = useState("2022");
 
   const removeNominatedMovie = (movie) => {
     movie.isNominated = false;
@@ -42,7 +39,6 @@ const MovieApp = ({ children }) => {
   return (
     <MovieContext.Provider
       value={{
-        // setSearch,
         nominations,
         nominationHandler,
         nominationAlert,
