@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { routes } from "../config/Router";
 import moviesImage from "../assets/movies-banner.jpg";
@@ -10,18 +10,24 @@ const Header = () => {
     <>
       <header className={classes.header}>
         <h1>
-          <Link to="/"> React Movies </Link>
+          <NavLink to="/"> React Movies </NavLink>
         </h1>
         <nav>
           <div className={classes["nav-item"]}>
             <div className={classes["nav-links"]}>
-              {routes.map(route => {
+              {routes.map((route) => {
                 if (route.isHeaderElement) {
                   return (
                     <li key={route.title}>
-                      <Link to={route.path} className={classes["link"]}>
+                      <NavLink
+                        to={route.path}
+                        className={classes["link"]}
+                        style={({ isActive }) => ({
+                          color: isActive ? "#fff" : "#ccc",
+                        })}
+                      >
                         {route.title}
-                      </Link>
+                      </NavLink>
                     </li>
                   );
                 }

@@ -43,8 +43,11 @@ ul {
   padding: 0;
 }
 
-.link {
+li a {
   text-decoration: none;
+}
+
+.link {
   padding: 10px;
   border-radius: 5px;
   color: #fff;
@@ -52,6 +55,11 @@ ul {
 }
 
 .link:hover {
+  background-color: rgb(0 0 0 / 15%);
+  color: #ccc;
+}
+
+.active-link {
   background-color: rgb(0 0 0 / 15%);
   color: #ccc;
 }
