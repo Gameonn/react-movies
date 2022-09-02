@@ -27,7 +27,6 @@ const Home = () => {
   const searchHandler = (e) => {
     setSearch(e.target.value);
     debounceFn(e.target.value);
-    setLoading(true);
   };
 
   const fetchMovies = async (value) => {
@@ -42,6 +41,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchMovies(search);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
