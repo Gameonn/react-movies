@@ -90,6 +90,7 @@ Go to http://www.omdbapi.com/apikey.aspx and fill out the form. You should recei
 
 ![image](https://user-images.githubusercontent.com/6601996/188055589-13cefccd-3eb9-4cd9-9cb1-e9411343c596.png)
 
+Click on the activation link in the above image and you are good to go.
 
 #### URL
 
