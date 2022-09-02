@@ -13,7 +13,7 @@ import classes from "../styles/Home.module.css";
 const Home = () => {
   const [search, setSearch] = useState("2022");
   const [error, setError] = useState("");
-  const [loadingState, setLoadingState] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState();
   const { nominationHandler, nominationAlert } = useContext(MovieContext);
 
@@ -25,24 +25,22 @@ const Home = () => {
   const searchHandler = (e) => {
     setSearch(e.target.value);
     debounceFn(e.target.value);
+    setLoading(true);
   };
 
   const fetchMovies = async (value) => {
-    // setLoadingState(true);
     const result = await searchMovies(value);
     if (result.Response === "True") {
       setError("");
       setMovies(result.Search);
     } else
       setError("No movies were found based on your search. Please try again.");
-    setLoadingState(false);
+    setLoading(false);
   };
 
   useEffect(() => {
     fetchMovies(search);
   }, []);
-
-  if (loadingState) return <Spinner />;
 
   return (
     <div className={classes["home-container"]}>
@@ -52,6 +50,7 @@ const Home = () => {
 
       <Input handleSearch={searchHandler} value={search} />
       {error && <Alertbox message={error} />}
+      {loading && <Spinner />}
 
       {!error && movies && (
         <div className={classes["movies"]}>
