@@ -22,10 +22,6 @@ This Project is a ReactJS application which demonstrates the following
 7. Movies in the nomination list should be able to be removed.
 8. Display a banner when the user has 5 nominations.
 
-## Live Application URL
-
-The Application is deployed on Github https://aditya-sridhar.github.io/simple-reactjs-app
-
 ## Prerequisites
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
