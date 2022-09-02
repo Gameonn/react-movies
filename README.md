@@ -1,4 +1,6 @@
-# React Movies App to search OMDB for movies
+# React Movies App
+
+This project is a React application with functions to search for movies using OMDb API and choose your movies for nominations.
 
 ## What is the use of this Repo
 
@@ -81,6 +83,13 @@ The Application Runs on **localhost:3000**
 #### HTTP client
 
 **axios** library is used to make HTTP Calls to the [OMDB server](https://www.omdbapi.com/)
+
+#### How to get API Key for OMDB API
+
+Go to http://www.omdbapi.com/apikey.aspx and fill out the form. You should receive an email like this:
+
+![image](https://user-images.githubusercontent.com/6601996/188055589-13cefccd-3eb9-4cd9-9cb1-e9411343c596.png)
+
 
 #### URL
 
