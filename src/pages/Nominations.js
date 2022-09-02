@@ -14,7 +14,7 @@ const Nominations = () => {
 
       {!nominations.length && (
         <div className={classes["nominate_warning"]}>
-          There is no movie nominations.
+          There are no movie nominations.
         </div>
       )}
       {nominations && (
