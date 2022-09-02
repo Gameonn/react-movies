@@ -88,9 +88,9 @@ The Application Runs on **localhost:3000**
 
 Go to http://www.omdbapi.com/apikey.aspx and fill out the form. You should receive an email like this:
 
-![image](https://user-images.githubusercontent.com/6601996/188055589-13cefccd-3eb9-4cd9-9cb1-e9411343c596.png)
+![image](https://user-images.githubusercontent.com/6601996/188055906-fb71ba58-5c79-4e79-a0c4-5afbd34f4b5d.png)
 
-Click on the activation link in the above image and you are good to go.
+Click on the activation link highlighted in the above image and you are good to go.
 
 #### URL
 
