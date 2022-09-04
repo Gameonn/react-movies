@@ -82,7 +82,7 @@ The Application Runs on **localhost:3000**
 
 #### HTTP client
 
-**axios** library is used to make HTTP Calls to the [OMDB server](https://www.omdbapi.com/)
+**Axios** library is used to make HTTP Calls to the [OMDB server](https://www.omdbapi.com/)
 
 #### How to get API Key for OMDB API
 
