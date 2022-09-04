@@ -50,7 +50,7 @@ Clone the project into local
 git clone https://github.com/Gameonn/react-movies.git
 ```
 
-Install all the npm packages. Go into the project directory and type the following command
+Go into the project directory and type the following command to install all the **npm** packages.
 
 ```bash
 npm install
@@ -68,7 +68,7 @@ In order to run the tests type the following command:
 npm run test
 ```
 
-The Application Runs on **localhost:3000**
+The application Runs on **localhost:3000**
 
 ## Application Design
 
