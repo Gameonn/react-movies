@@ -26,7 +26,6 @@ This Project is a ReactJS application which demonstrates the following
 
 ![localhost_3000_](https://user-images.githubusercontent.com/6601996/188057021-06d5a3ad-383d-4d43-a57b-01015c16fbb4.png)
 
-
 ## Prerequisites
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -83,7 +82,7 @@ The Application Runs on **localhost:3000**
 
 #### HTTP client
 
-**axios** library is used to make HTTP Calls to the [OMDB server](https://www.omdbapi.com/)
+**Axios** library is used to make HTTP Calls to the [OMDB server](https://www.omdbapi.com/)
 
 #### How to get API Key for OMDB API
 
