@@ -52,7 +52,7 @@ git clone https://github.com/Gameonn/react-movies.git
 
 Go into the project directory and type the following command to install all the **npm** packages.
 
-```bash
+```
 npm install
 ```
 
