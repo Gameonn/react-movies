@@ -68,7 +68,7 @@ In order to run the tests type the following command:
 npm run test
 ```
 
-The application Runs on **localhost:3000**
+The application runs on **localhost:3000**
 
 ## Application Design
 
