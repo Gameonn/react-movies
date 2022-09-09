@@ -58,7 +58,7 @@ npm install
 
 In order to run the application type the following command
 
-```bash
+```
 npm start
 ```
 
