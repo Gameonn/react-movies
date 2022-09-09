@@ -105,6 +105,6 @@ The application has different routes:
 **create-react-app** : The following link has all the commands that can be used with create-react-app
 https://github.com/facebook/create-react-app
 
-**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
+**ReactJS** : Refer to https://reactjs.org to understand the concepts of ReactJS
 
 **OMDB API**: The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.
