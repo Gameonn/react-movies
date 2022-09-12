@@ -1,6 +1,7 @@
 {
   "name": "movie-arena",
   "version": "0.1.0",
+  "homepage": "http://gameonn.github.io/react-movies",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
