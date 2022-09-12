@@ -52,13 +52,13 @@ git clone https://github.com/Gameonn/react-movies.git
 
 Go into the project directory and type the following command to install all the **npm** packages.
 
-```bash
+```
 npm install
 ```
 
 In order to run the application type the following command
 
-```bash
+```
 npm start
 ```
 
@@ -68,7 +68,7 @@ In order to run the tests type the following command:
 npm run test
 ```
 
-The application Runs on **localhost:3000**
+The application runs on **localhost:3000**
 
 ## Application Design
 
@@ -105,6 +105,6 @@ The application has different routes:
 **create-react-app** : The following link has all the commands that can be used with create-react-app
 https://github.com/facebook/create-react-app
 
-**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
+**ReactJS** : Refer to https://reactjs.org to understand the concepts of ReactJS
 
 **OMDB API**: The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.
